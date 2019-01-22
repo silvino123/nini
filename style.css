@@ -839,12 +839,12 @@ li {
 
 .caviar-dish-menu:before {
     position: absolute;
-    font-size: 150px;
+    font-size: 100px;
     right: -10%;
     margin: 0;
-    content: 'Special';
+    content: 'Catalogo';
     line-height: 1;
-    top: 35%;
+    top: 40%;
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
     color: rgba(0, 0, 0, 0.05);
