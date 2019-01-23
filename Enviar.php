@@ -30,7 +30,7 @@ $Carta .= "Imagen : $Imagen";
 mail($Destinatario,$Asunto, $Carta);
 echo "
                 <script language='JavaScript'>
-                var mensaje = 'Mensaje Enviado';
+                var mensaje = 'Cotización Enviada Espere Respuesta de Nini & Co. A Su Correo';
                 alert(mensaje);
                 </script>";
         echo "
