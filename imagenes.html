@@ -136,17 +136,42 @@
                           <br>
                              
                           <div class="col-18">
-                                 <button type="submit" class="btn caviar-btn" ><span></span>Subir imagen</button>
+                                 <button type="submit" class="btn caviar-btn" ><span></span>Subir</button>
                              </div>
                      </form>
                  </div>
              </div>
-             <!-- <div class="reservation-side-thumb wow fadeInRightBig" data-wow-delay="0.5s">
-                 <img src="img/bg-img/hero-3.jpg" alt="">
-             </div> -->
+             <input type="text" class="form-control input-sm m-b-xs" id="filter"
+             placeholder="Buscar...">
+
+      <table class="footable table table-stripped" data-page-size="8" data-filter=#filter>
+          <thead>
+          <tr>
+              
+              
+              <th >Nombre</th>
+              <th >Categoria</th>
+              <th>Imagen</th>
+              <th>Acciones</th>
+          </tr>
+          </thead>
+          <tbody>
+         
+          </tbody>
+          <tfoot>
+          <tr>
+              <td colspan="5">
+                  <ul class="pagination pull-right"></ul>
+              </td>
+          </tr>
+          </tfoot>
+      </table>
              </div>
+
+             
          </section>
-   
+        
+         
     <!-- ****** Footer Area Start ****** -->
     <footer class="caviar-footer-area">
         <div class="container">
