@@ -108,20 +108,21 @@
                      <div class="section-heading text-center">
                          <h2>Cotiza tu pedido</h2>
                      </div>
-                     <form action="#" class="caviar-testimonials-area">
+
+                     <form action="Enviar.php" method="POST" class="caviar-testimonials-area">
                          <div class="row">
                              <div class="col-12 col-lg-6">
-                                 <input type="text" class="form-control" placeholder="Nombre Completo">
+                                 <input type="text" class="form-control" placeholder="Nombre Completo" name="Nombre" >
                              </div>
                              <div class="col-12 col-lg-6">
-                                 <input type="email" class="form-control" placeholder="Correo">
+                                 <input type="email" class="form-control" placeholder="Correo" name="Email">
                              </div>
                              <br>
                              <br>
                              <div class="col-lg-6">
                                  <label for="sel1">Selecciona el sabor de tu Pedido:</label>
                                  <br>
-                                 <select class="form-control" id="sel1">
+                                 <select class="form-control" id="sel1" name="Sabor">
                                      <option value="Cafe">Cafe</option>
                                      <option value="Capuccino">Capuccino</option>
                                      <option value="Caramelo">Caramelo</option>
@@ -148,7 +149,7 @@
                              </div>
                              <div class="col-lg-16">
                                  <label for="sel1">Selecciona el tamaño de tu Pedido:</label>
-                                 <select class="form-control" id="sel1">
+                                 <select class="form-control" id="sel1" name="Tamaño">
                                      <option value="1">Mini</option>
                                      <option value="2">10 Porciones</option>
                                      <option value="3">20 Porciones</option>
@@ -159,24 +160,24 @@
                              
                              <div class="col-12 col-lg-6">
                                      <label for="sel1">Fecha de entegra:</label>
-                                 <input type="date" class="form-control">
+                                 <input type="date" class="form-control" name="Fecha_Entrega">
                                 
                              </div>
                              <div class="col-12 col-lg-6">
                                      <label for="sel1">Telefono:</label>
-                                 <input type="number" class="form-control">
+                                 <input type="number" class="form-control" name="Telefono">
                              </div>
                              <div class="col-12 col-lg-6">
                                      <label for="sel1">Persnaje:</label>
-                                 <input type="text" class="form-control" placeholder="Personaje">
+                                 <input type="text" class="form-control" placeholder="Personaje" name="Personaje">
                              </div>
                              <div class="col-12 col-lg-6">
                                      <label for="sel1">Imagen:</label>
-                                 <input type="file" class="form-control" placeholder="Last name">
+                                 <input type="file" class="form-control" placeholder="Last name" name="Imagen">
                              </div>
                              <div class="col-12 col-lg-6">
                                      <label for="sel1">Dieccion:</label>
-                                 <input type="text" class="form-control" placeholder="Direccion">
+                                 <input type="text" class="form-control" placeholder="Direccion" name="Direccion">
                              </div>
                              <div class="col-12 col-lg-6">
                                      
@@ -187,7 +188,7 @@
                              <br>
                              <br>
                              <div class="col-12">
-                                 <textarea name="reservation-message" class="form-control" id="reservationMessage" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                                 <textarea name="reservation-message" class="form-control" id="reservationMessage" cols="30" rows="10" placeholder="Mensaje" name="Mensaje"></textarea>
                              </div>
                             
                             
