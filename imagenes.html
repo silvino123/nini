@@ -123,12 +123,12 @@
                             
                              <div class="col-12 col-lg-6">
                                      <label for="sel1">Imagen:</label>
-                                 <input type="file" class="form-control" placeholder="Last name">
+                                 <input type="file" class="form-control" id="file-upload">
                              </div>
                              
                              <div class="col-12 col-lg-6">
-                                     
-                                 </div>
+                                <img id="imgSalida" width="50%" height="50%" src="" />      
+                            </div>
                              <br>
                              <br>
                             
@@ -174,4 +174,36 @@
     <script src="js/others/plugins.js"></script>
     <!-- Active JS -->
     <script src="js/active.js"></script>
+    <script>
+      
+ $(window).load(function(){
+
+$(function() {
+ $('#file-upload').change(function(e) {
+     addImage(e); 
+    });
+
+    function addImage(e){
+     var file = e.target.files[0],
+     imageType = /image.*/;
+   
+     if (!file.type.match(imageType))
+      return;
+ 
+     var reader = new FileReader();
+     reader.onload = fileOnload;
+     reader.readAsDataURL(file);
+    }
+ 
+    function fileOnload(e) {
+     var result=e.target.result;
+     $('#imgSalida').attr("src",result);
+    }
+   });
+ });
+     
+    </script>
+     
+    
+    
 </body>
