@@ -1,6 +1,6 @@
 <?php 
 
-$db="abarrotes";
+$db="ninico";
 $host="localhost";
 $pw="";
 $user="root";

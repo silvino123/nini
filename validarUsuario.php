@@ -4,7 +4,7 @@ require('conec.php');
 $nombre = trim($_POST['email']);
 $password = trim($_POST['Password']);
 
-$rs  = "SELECT * FROM usuarios WHERE correo = '$nombre' AND Contrasena = '$password'";
+$rs  = "SELECT * FROM usuarios WHERE correo = '$nombre' AND contrasena = '$password'";
 $qs = mysqli_query($con, $rs);
 $row    = mysqli_fetch_assoc($qs);
 if (!isset($row)) {
@@ -12,10 +12,10 @@ if (!isset($row)) {
 }
          $id  = $row['id'];
          $nombre= $row["correo"];
-         $password = $row['Contrasena'];
+         $password = $row['contrasena'];
 
 
-if ($row["correo"] === $nombre && $row["Contrasena"] === $password) {
+if ($row["correo"] === $nombre && $row["contrasena"] === $password) {
         session_start();
         $_SESSION["correo"] = $nombre;
         $_SESSION["id"] = $id;
@@ -23,8 +23,9 @@ if ($row["correo"] === $nombre && $row["Contrasena"] === $password) {
 
         echo "
                 <script language='JavaScript'>
-                var mensaje = 'sesión iniciada';
+                var mensaje='Sesion iniciada';
                 alert(mensaje);
+
                 </script>";
         echo "
                 <script>
@@ -51,3 +52,11 @@ if ($row["correo"] === $nombre && $row["Contrasena"] === $password) {
 
 
 ?>
+ <!-- <script language='JavaScript'>
+         function Sesion(){
+                alertify
+               .alert('Sesion iniciada', function(){
+                  alertify.message('OK');
+                  });
+         }
+ </script> -->
