@@ -56,12 +56,12 @@
             <div class="row h-100">
                 <div class="col-12 h-100">
                     <nav class="h-100 navbar navbar-expand-lg align-items-center">
-                        <a class="navbar-brand" href="index.html">Nini&Co.</a>
+                        <a class="navbar-brand" href="index.php">Nini&Co.</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#caviarNav" aria-controls="caviarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
                         <div class="collapse navbar-collapse" id="caviarNav">
                             <ul class="navbar-nav ml-auto" id="caviarMenu">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="index.html">Inicio</a>
+                                    <a class="nav-link" href="index.php">Inicio</a>
                                 </li>
                                
                                 
@@ -109,7 +109,7 @@
                          <h2>Cotiza tu pedido</h2>
                      </div>
 
-                     <form action="Enviar.php" method="POST" class="caviar-testimonials-area">
+                     <form action="Enviar.php" method="POST" class="caviar-testimonials-area" enctype="multipart/form-data">
                          <div class="row">
                              <div class="col-12 col-lg-6">
                                  <input type="text" class="form-control" placeholder="Nombre Completo" name="Nombre" >
@@ -147,7 +147,7 @@
                                      <option value="Vainilla">Vainilla</option>
                                  </select>
                              </div>
-                             <div class="col-lg-16">
+                             <div class="col-lg-6">
                                  <label for="sel1">Selecciona el tamaño de tu Pedido:</label>
                                  <select class="form-control" id="sel1" name="Tamaño">
                                      <option value="1">Mini</option>
@@ -238,4 +238,43 @@
     <script src="js/google-map/map-active.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
+    <!-- <script>
+      
+        $(window).load(function(){
+       
+       $(function() {
+        $('#im').change(function(e) {
+            addImage(e); 
+           });
+       
+           function addImage(e){
+            var file = e.target.files[0],
+            imageType = /image.*/;
+          
+            if (!file.type.match(imageType))
+             return;
+        
+            var reader = new FileReader();
+            reader.onload = fileOnload;
+            reader.readAsDataURL(file);
+           }
+        
+           function fileOnload(e) {
+            var result=e.target.result;
+            
+            $.ajax({
+          type: 'post',
+          url: 'Enviar.php',
+          data:{Imagen:result},
+          success:function(data){
+            
+          location.href ="imagenes.php";
+          }
+      });
+      $('#imgSalida').attr("src",result);
+           }
+          });
+        });
+            
+           </script> -->
 </body>

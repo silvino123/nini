@@ -56,19 +56,19 @@
             <div class="row h-100">
                 <div class="col-12 h-100">
                     <nav class="h-100 navbar navbar-expand-lg align-items-center">
-                            <a class="navbar-brand" href="index.html">
+                            <a class="navbar-brand" href="index.php">
                                     <img src="img/core-img/Logo.png"  width="50%" height="80%" alt="">
                                 </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#caviarNav" aria-controls="caviarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
                         <div class="collapse navbar-collapse" id="caviarNav">
                             <ul class="navbar-nav ml-auto" id="caviarMenu">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="index.html">Inicio</a>
+                                    <a class="nav-link" href="index.php">Inicio</a>
                                 </li>
                                 <!--<li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="index.html">Inicio</a>
+                                        <a class="dropdown-item" href="index.php">Inicio</a>
                                         <a class="dropdown-item" href="menu.html">Menu</a>
                                         <a class="dropdown-item" href="regular-page.html">Regular Page</a>
                                         <a class="dropdown-item" href="contact.html">Contacto</a>
