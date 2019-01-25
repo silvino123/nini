@@ -134,53 +134,35 @@
              <div class="caviar-testimonials-area">
                  <div class="testimonials-content" >
                      <div class="section-heading text-center">
-                         <h2>Imagenes</h2>
+                         <h2>Registro de Usuarios</h2>
                      </div>
-                     <form class="caviar-testimonials-area" method="post" action="regImg.php" enctype="multipart/form-data">
+                     <form class="caviar-testimonials-area" method="post" action="regUsuario.php" enctype="multipart/form-data">
                          <div class="row">
                              <div class="col-12 col-lg-6">
-                                 <input type="text" class="form-control" placeholder="Nombre Pastel" id="Nombre" name="Nombre">
+                             <label for="sel1">Nombre</label>
+                                 <input type="text" class="form-control" id="Nombre" name="Nombre" required="">
                              </div>
                              <div class="col-12 col-lg-6">
-                                 <input type="text" class="form-control" placeholder="Descripcion" id="Descripcion" name="Descripcion">
+                             <label for="sel1">Correo</label>
+                                 <input type="email" class="form-control"  id="Correo" name="Correo" required="">
                              </div>
-                             <br>
-                             <br>
-                             <div class="col-lg-6">
-                                 <label for="sel1">Selecciona el tipo de Pastel</label>
-                                 <br>
-                                 <select class="form-control" id="sel1" id="Cat" name="Cat">
-                                     <option value="Personajes">Personajes</option>
-                                     <option value="CupCakes">CupCakes</option>
-                                     <option value="Boda">Boda</option>
-                                     <option value="Bautizo">Bautizo</option>
-                                     <option value="inicio">inicio</option>
-                                 </select>
-                             </div>
-                            
+                            <br>
+                            <br>
                              <div class="col-12 col-lg-6">
-                                     <label for="sel1">Imagen:</label>
-                                     <span class="fileinput-filename"></span>
-                                 <input type="file" class="form-control" id="im" name="im"/>
-                             </div>
-                             
-                             <div class="col-12 col-lg-6">
-                                <img id="imgSalida" width="50%" height="50%" src="" />      
+                             <label for="sel1">Contraseña</label>
+                             <input type="password" class="form-control"  id="Contrasena" name="Contrasena" required="">    
                             </div>
-                             <br>
-                             <br>
-                            
-                         </div>
-                          <br>
                              
-                          <div class="col-18">
-                                 <button type="submit" class="btn caviar-btn" ><span></span>Subir</button>
+                         </div>
+                         <br>
+                         <br>
+                         <div class="col-18">
+                                 <button type="submit" class="btn caviar-btn" ><span></span>Registrar</button>
                              </div>
                      </form>
                  </div>
              </div>
-             <input type="text" class="form-control input-sm m-b-xs" id="filter"
-             placeholder="Buscar...">
+            
 
       <table class="footable table table-stripped" data-page-size="8" data-filter=#filter id="img">
           <thead>
@@ -188,16 +170,15 @@
               
               
               <th >Nombre</th>
-              <th >Descripcion</th>
-              <th >Categoria</th>
-              <th>Imagen</th>
-              <th>Acciones</th>
+              <th >Correo</th>
+              <th >Contraseña</th>
+              
           </tr>
           </thead>
           <tbody>
             <?php 
 
-            require('conImg.php');
+            require('conUsuario.php');
              ?>
           </tbody>
           <tfoot>

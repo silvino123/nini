@@ -11,7 +11,7 @@ $destino="imagenes/Pasteles/";
 $imagens=$_FILES['im']['tmp_name'];
 $nomimagen=$_FILES['im']['name'];
 $ext= pathinfo($nomimagen);
-$d=rand(1,3000);
+$d=rand(1,10000);
 $pastel="pastel".$d;
 move_uploaded_file($imagens, $destino."/".$pastel.".".$ext['extension']);
 $nom=$pastel.".".$ext['extension'];
