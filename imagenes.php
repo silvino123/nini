@@ -20,7 +20,44 @@
 
     <!-- Responsive CSS -->
     <link href="css/responsive/responsive.css" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="js/alertifyjs/css/alertify.css">
+    <link rel="stylesheet" type="text/css" href="js/alertifyjs/css/themes/default.css">
+<style>
+    .btn-edit {
+    width: 30px;
+    height: 30px;
+    background-color: #28a745;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    color: #fff;
+    line-height: 60px;
+    font-weight: 700;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+}
+.btn-delete {
+    width: 30px;
+    height: 30px;
+    background-color: #dc3545;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    color: #fff;
+    line-height: 60px;
+    font-weight: 700;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+} 
+.btn-edit:hover {
+    background-color: #333333;
+}
+.btn-delete:hover {
+    background-color: #dddddd;
+}
+    </style>
 </head>
 
 <body>
@@ -145,7 +182,7 @@
              <input type="text" class="form-control input-sm m-b-xs" id="filter"
              placeholder="Buscar...">
 
-      <table class="footable table table-stripped" data-page-size="8" data-filter=#filter>
+      <table class="footable table table-stripped" data-page-size="8" data-filter=#filter id="img">
           <thead>
           <tr>
               
@@ -204,6 +241,8 @@
     <script src="js/others/plugins.js"></script>
     <!-- Active JS -->
     <script src="js/active.js"></script>
+    <script src="js/alertifyjs/alertify.js"></script>
+    <script src="js/alertifyjs/alertify.min.js"></script>
     <script>
       
  $(window).load(function(){

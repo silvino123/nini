@@ -207,80 +207,50 @@
                         <div class="caviar-portfolio clearfix">
                             <!-- Single Gallery Item -->
                             <div class="single_menu_item breakfast wow fadeInUp">
-                                <div class="d-sm-flex align-items-center">
-                                    <!-- <div class="dish-thumb"> -->
-                                        <!--<img src="img/menu-img/Personajes/dish-1.png" alt="">-->
-                                        <img src="img/menu-img/Personajes/p1.jpg" alt="" style="width:300px;height:300px;border-radius:150px">
-                                    <!-- </div> -->
-                                    <div class="dish-description">
-                                        <h3>Lorem Ipsum Dolor Sit Amet</h3>
-                                        <p>Sed commodo augue eu diam tincidunt, sit amet auctor lectus semper. Mauris porttitor diam at fringilla tempor.</p>
-                                    </div>
-                                    <!-- <div class="dish-value">
-                                        <h3>$45</h3>
-                                    </div> -->
-                                </div>
+                            <?php 
+
+                             require('conPersonaje.php');
+                              ?>
+                               
                             </div>
                             <!-- Single Gallery Item -->
-                            <div class="single_menu_item breakfast dinner wow fadeInUp">
+                            <!-- <div class="single_menu_item breakfast dinner wow fadeInUp">
                                 <div class="d-sm-flex align-items-center">
-                                    <!-- <div class="dish-thumb"> -->
+                                    <div class="dish-thumb">
                                         <img src="img/menu-img/Personajes/p2.jpg" alt="" style="width:300px;height:300px;border-radius:150px">
-                                    <!-- </div> -->
+                                    </div>
                                     <div class="dish-description">
                                         <h3>Lorem Ipsum Dolor Sit Amet</h3>
                                         <p>Sed commodo augue eu diam tincidunt, sit amet auctor lectus semper. Mauris porttitor diam at fringilla tempor.</p>
                                     </div>
-                                    <!-- <div class="dish-value">
+                                    <div class="dish-value">
                                         <h3>$45</h3>
-                                    </div> -->
-                                </div>
-                            </div>
-                            <!-- Single Gallery Item -->
-                            <div class="single_menu_item lunch wow fadeInUp">
-                                <div class="d-sm-flex align-items-center">
-                                    <!-- <div class="dish-thumb"> -->
-                                        <img src="img/menu-img/Personajes/p3.jpg" alt="" style="width:300px;height:300px;border-radius:150px">
-                                    <!-- </div> -->
-                                    <div class="dish-description">
-                                        <h3>Lorem Ipsum Dolor Sit Amet</h3>
-                                        <p>Sed commodo augue eu diam tincidunt, sit amet auctor lectus semper. Mauris porttitor diam at fringilla tempor.</p>
                                     </div>
-                                    <!-- <div class="dish-value">
-                                        <h3>$45</h3>
-                                    </div> -->
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- Single Gallery Item -->
                             <div class="single_menu_item lunch wow fadeInUp">
+                              <?php 
+
+                              require('conCupcake.php');
+                                ?>
+                                
+                            </div>
+                            <!-- Single Gallery Item -->
+                            <!-- <div class="single_menu_item lunch wow fadeInUp">
                                 <div class="d-sm-flex align-items-center">
-                                    <!-- <div class="dish-thumb"> -->
+                                    
                                         <img src="img/menu-img/Personajes/p4.jpg" alt="" style="width:300px;height:300px;border-radius:150px">
-                                    <!-- </div> -->
+                                   
                                     <div class="dish-description">
                                         <h3>Lorem Ipsum Dolor Sit Amet</h3>
                                         <p>Sed commodo augue eu diam tincidunt, sit amet auctor lectus semper. Mauris porttitor diam at fringilla tempor.</p>
                                     </div>
-                                    <!-- <div class="dish-value">
-                                        <h3>$45</h3>
-                                    </div> -->
+                                    
                                 </div>
-                            </div>
-                            <!-- Single Gallery Item -->
-                            <div class="single_menu_item dinner wow fadeInUp">
-                                <div class="d-sm-flex align-items-center">
-                                    <!-- <div class="dish-thumb"> -->
-                                        <img src="img/menu-img/Personajes/p5.jpg" alt="" style="width:300px;height:300px;border-radius:150px">
-                                    <!-- </div> -->
-                                    <div class="dish-description">
-                                        <h3>Lorem Ipsum Dolor Sit Amet</h3>
-                                        <p>Sed commodo augue eu diam tincidunt, sit amet auctor lectus semper. Mauris porttitor diam at fringilla tempor.</p>
-                                    </div>
-                                    <!-- <div class="dish-value">
-                                        <h3>$45</h3>
-                                    </div> -->
-                                </div>
-                            </div>
+                            </div> -->
+                           
+                           
                         </div>
 
                         </div>

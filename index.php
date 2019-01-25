@@ -201,37 +201,24 @@
                         <h2>Catalogo de Pasteles</h2>
                     </div>
                     <!-- btn -->
-                    <a href="menu.html" class="btn caviar-btn"><span></span> Ver Catalogo</a>
+                    <a href="menu.php" class="btn caviar-btn"><span></span> Ver Catalogo</a>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-sm-6 col-md-4">
-                    <div class="caviar-single-dish wow fadeInUp" data-wow-delay="0.5s">
-                        <img src="img/menu-img/Personajes/1.jpg" alt="" style="width:200px;height:200px;border-radius:150px">
+                <!-- <div class="col-12 col-sm-6 col-md-4">
+                    <div class="caviar-single-dish wow fadeInUp" data-wow-delay="0.5s"> -->
+                        <?php 
+
+                        require('conIndex.php');
+                         ?>
+                        <!-- <img src="img/menu-img/Personajes/1.jpg" alt="" style="width:200px;height:200px;border-radius:150px">
                         <div class="dish-info">
-                            <!-- <h6 class="dish-name">Lorem Ipsum Dolor Sit Amet</h6> -->
-                            <!-- <p class="dish-price"></p> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                    <div class="caviar-single-dish wow fadeInUp" data-wow-delay="1s">
-                        <img src="img/menu-img/Personajes/2.jpg" alt="" style="width:200px;height:200px;border-radius:150px">
-                        <div class="dish-info">
-                            <!-- <h6 class="dish-name">Lorem Ipsum</h6> -->
-                            <!-- <p class="dish-price"></p> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                    <div class="caviar-single-dish wow fadeInUp" data-wow-delay="1.5s">
-                        <img src="img/menu-img/Personajes/4.jpg" alt="" style="width:200px;height:200px;border-radius:150px">
-                        <div class="dish-info">
-                            <!-- <h6 class="dish-name">Lorem Ipsum Dolor Sit Amet</h6> -->
-                            <!-- <p class="dish-price"></p> -->
-                        </div>
-                    </div>
-                </div>
+                            <h6 class="dish-name"></h6>
+                            <p class="dish-price"></p>
+                        </div> -->
+                    <!-- </div>
+                </div> -->
+                
             </div>
         </div>
     </section>
