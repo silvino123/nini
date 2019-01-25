@@ -68,7 +68,7 @@
                                 </li>
                                
                                 <li class="nav-item">
-                                        <a class="nav-link" href="imagenes.html">Imagenes</a>
+                                        <a class="nav-link" href="imagenes.php">Imagenes</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="ordenar.html">Usuarios</a>
@@ -99,31 +99,32 @@
                      <div class="section-heading text-center">
                          <h2>Imagenes</h2>
                      </div>
-                     <form action="#" class="caviar-testimonials-area">
+                     <form class="caviar-testimonials-area" method="post" action="regImg.php" enctype="multipart/form-data">
                          <div class="row">
                              <div class="col-12 col-lg-6">
-                                 <input type="text" class="form-control" placeholder="Nombre Pastel">
+                                 <input type="text" class="form-control" placeholder="Nombre Pastel" id="Nombre" name="Nombre">
                              </div>
                              <div class="col-12 col-lg-6">
-                                 <input type="email" class="form-control" placeholder="Descripcion">
+                                 <input type="text" class="form-control" placeholder="Descripcion" id="Descripcion" name="Descripcion">
                              </div>
                              <br>
                              <br>
                              <div class="col-lg-6">
                                  <label for="sel1">Selecciona el tipo de Pastel</label>
                                  <br>
-                                 <select class="form-control" id="sel1">
+                                 <select class="form-control" id="sel1" id="Cat" name="Cat">
                                      <option value="Personajes">Personajes</option>
                                      <option value="CupCakes">CupCakes</option>
                                      <option value="Boda">Boda</option>
                                      <option value="Bautizo">Bautizo</option>
-                                     
+                                     <option value="inicio">inicio</option>
                                  </select>
                              </div>
                             
                              <div class="col-12 col-lg-6">
                                      <label for="sel1">Imagen:</label>
-                                 <input type="file" class="form-control" id="file-upload">
+                                     <span class="fileinput-filename"></span>
+                                 <input type="file" class="form-control" id="im" name="im"/>
                              </div>
                              
                              <div class="col-12 col-lg-6">
@@ -150,6 +151,7 @@
               
               
               <th >Nombre</th>
+              <th >Descripcion</th>
               <th >Categoria</th>
               <th>Imagen</th>
               <th>Acciones</th>
@@ -158,7 +160,7 @@
           <tbody>
             <?php 
 
-            require('../Controlador/conProducto.php');
+            require('conImg.php');
              ?>
           </tbody>
           <tfoot>
@@ -207,7 +209,7 @@
  $(window).load(function(){
 
 $(function() {
- $('#file-upload').change(function(e) {
+ $('#im').change(function(e) {
      addImage(e); 
     });
 
