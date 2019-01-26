@@ -137,7 +137,7 @@
                          <h2>Registro de Usuarios</h2>
                      </div>
                      <form class="caviar-testimonials-area" method="post" action="regUsuario.php" enctype="multipart/form-data">
-                         <div class="row">
+                            <div class="row">
                              <div class="col-12 col-lg-6">
                              <label for="sel1">Nombre</label>
                                  <input type="text" class="form-control" id="Nombre" name="Nombre" required="">
@@ -146,14 +146,14 @@
                              <label for="sel1">Correo</label>
                                  <input type="email" class="form-control"  id="Correo" name="Correo" required="">
                              </div>
-                            <br>
-                            <br>
+                             <br>
+                             <br>
                              <div class="col-12 col-lg-6">
                              <label for="sel1">Contraseña</label>
                              <input type="password" class="form-control"  id="Contrasena" name="Contrasena" required="">    
-                            </div>
+                             </div>
                              
-                         </div>
+                             </div>
                          <br>
                          <br>
                          <div class="col-18">
@@ -211,7 +211,33 @@
         </div>
     </footer>
     <!-- ****** Footer Area End ****** -->
-
+    <div class="modal fade" id="user" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+       <br>
+          <br>
+         
+    <div class="modal-content">
+      <div class="modal-header">
+         
+        <h5 class="modal-title" id="exampleModalLabel">Editar Usuarios</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <form class="form-horizontal" method="post" action="editUsuario.php">
+                <div class="fetched-data"></div> 
+       
+      
+      <div class="modal-footer">
+     
+        <button type="submit" class="btn btn-secondary">Editar</button>
+      </div>
+       </form>
+       </div>
+    </div>
+  </div>
+</div>
     <!-- Jquery-2.2.4 js -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
@@ -257,3 +283,23 @@ $(function() {
     
     
 </body>
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('#user').on('show.bs.modal', function (e) {
+
+        var rowid = $(e.relatedTarget).data('id');
+        
+        $.ajax({
+            type : 'post',
+            url : 'CargaModalUsu.php', 
+            data :  'rowid='+ rowid, //Pass $id
+            success : function(data){
+              
+              $('.fetched-data').html(data);
+
+          
+            }
+        });
+     });
+});
+</script>

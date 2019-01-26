@@ -14,7 +14,7 @@ require('conec.php');
                         
                          // <a href='../Vista/editarproducto.php?id=".$row['id']."' class='btn btn-success'><i class='glyphicon glyphicon-edit'></i></a>
                       echo "<td>
-                      <a class='btn-edit' data-toggle='modal' title='Editar' href='#infoModal' data-id=".$row['id']."><i class='glyphicon glyphicon-list-alt'></i></a>
+                      <a class='btn-edit' data-toggle='modal' title='Editar' href='#user' data-id=".$row['id']."><i class='glyphicon glyphicon-list-alt'></i></a>
                       
                       <a onclick='deleteAjax(".$row['id'].")' title='Eliminar' class='btn-delete'><i class='glyphicon glyphicon-trash'></i></a>
                       

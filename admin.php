@@ -1,8 +1,8 @@
 <?php 
- if (!isset($_SESSION['id'])){
-    header("location:login.html");
+//  if (!isset($_SESSION['id'])){
+//     header("location:login.html");
   
-  }
+//   }
   
 
 

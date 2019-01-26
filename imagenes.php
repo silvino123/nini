@@ -57,6 +57,17 @@
 .btn-delete:hover {
     background-color: #dddddd;
 }
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+.pull-right {
+    float: right!important;
+}
+
+
     </style>
 </head>
 
@@ -137,9 +148,9 @@
                          <h2>Imagenes</h2>
                      </div>
                      <form class="caviar-testimonials-area" method="post" action="regImg.php" enctype="multipart/form-data">
-                         <div class="row">
+                            <div class="row">
                              <div class="col-12 col-lg-6">
-                                 <input type="text" class="form-control" placeholder="Nombre Pastel" id="Nombre" name="Nombre">
+                                 <input type="text" class="form-control" placeholder="Nombre Pastel" id="Nombre" name="Nombre" required="">
                              </div>
                              <div class="col-12 col-lg-6">
                                  <input type="text" class="form-control" placeholder="Descripcion" id="Descripcion" name="Descripcion">
@@ -149,11 +160,10 @@
                              <div class="col-lg-6">
                                  <label for="sel1">Selecciona el tipo de Pastel</label>
                                  <br>
-                                 <select class="form-control" id="sel1" id="Cat" name="Cat">
+                                 <select class="form-control" id="sel1" id="Cat" name="Cat" required="">
                                      <option value="Personajes">Personajes</option>
                                      <option value="CupCakes">CupCakes</option>
-                                     <option value="Boda">Boda</option>
-                                     <option value="Bautizo">Bautizo</option>
+                                     <option value="Panque">Panque</option>
                                      <option value="inicio">inicio</option>
                                  </select>
                              </div>
@@ -161,7 +171,7 @@
                              <div class="col-12 col-lg-6">
                                      <label for="sel1">Imagen:</label>
                                      <span class="fileinput-filename"></span>
-                                 <input type="file" class="form-control" id="im" name="im"/>
+                                 <input type="file" class="form-control" id="im" name="im" required=""/>
                              </div>
                              
                              <div class="col-12 col-lg-6">
@@ -229,6 +239,49 @@
             </div>
         </div>
     </footer>
+    <!-- <div class="modal fade" id="exampleModal" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Editar Pastel</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" method="post" action="../Controlador/regProducto2.php">
+                <div class="fetched-data"></div> 
+            </div>
+            <div class="modal-footer">
+                 <input type='submit'  value='Guardar' class='btn btn-primary'>
+            </div>
+             </form>
+        </div>
+    </div>
+</div> -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+       <br>
+          <br>
+         
+    <div class="modal-content">
+      <div class="modal-header">
+         
+        <h5 class="modal-title" id="exampleModalLabel">Editar Pastel</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <form class="form-horizontal" method="post" action="../Controlador/regProducto2.php">
+                <div class="fetched-data"></div> 
+       
+      </div>
+      <div class="modal-footer">
+      </form>
+        <button type="submit" class="btn btn-secondary">Editar</button>
+      </div>
+    </div>
+  </div>
+</div>
     <!-- ****** Footer Area End ****** -->
 
     <!-- Jquery-2.2.4 js -->
@@ -276,3 +329,23 @@ $(function() {
     
     
 </body>
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('#exampleModal').on('show.bs.modal', function (e) {
+
+        var rowid = $(e.relatedTarget).data('id');
+        
+        $.ajax({
+            type : 'post',
+            url : 'CargaModal.php', 
+            data :  'rowid='+ rowid, //Pass $id
+            success : function(data){
+              
+              $('.fetched-data').html(data);
+
+          
+            }
+        });
+     });
+});
+</script>
