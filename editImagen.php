@@ -14,30 +14,29 @@ $d=rand(0,9).rand(100,9999).rand(100,9999);
 $pastel="pastel".$d;
 move_uploaded_file($imagens, $destino."/".$pastel.".".$ext['extension']);
 $nom=$pastel.".".$ext['extension'];
-$destino2="imagenes/Pasteles/".".".$nomimagen;
 
-// if (!file_exists($destino2)) {
-//     move_uploaded_file($imagens, $destino."/".$pastel.".".$ext['extension']);
-// }
-if($_FILES["im"]["name"]){
- $selecionar = "SELECT imagen FROM imagenes WHERE id = '$id'";
-$resultado_seleccionar = mysqli_query($con, $selecionar);
-$ruta_foto_db = "imagenes/Pasteles/" . $resultado_seleccionar['imagen'];
-
-if(file_exists($ruta_foto_db)){
-    unlink($ruta_foto_db);
+$rs = mysqli_query($con,"SELECT imagen FROM imagenes WHERE id='$id'");
+	$foto = mysqli_fetch_array($rs);
+    $destino2="imagenes/Pasteles/".$foto['imagen'];
+    
+    
+if (!file_exists($destino.$nom)) {
+    move_uploaded_file($imagens, $destino."/".$pastel.".".$ext['extension']);
 }
-$foto_db = mysqli_fetch_array($resultado_seleccionar);
+if($_FILES["im"]["name"]){
+    if(file_exists($destino2)){
+        unlink($destino.$foto['imagen']);
+    }
     $qss ="UPDATE imagenes set nombre='$nombre',descripcion='$des',categoria='$cat',codigo='$pastel',imagen='$nom' WHERE id=$id"; 
 
-$ejecuta_qss= mysqli_query($con,$qss) or die("error al actualizar datos");
+
 }else{
     $qss ="UPDATE imagenes set nombre='$nombre',descripcion='$des',categoria='$cat' WHERE id=$id"; 
 
-$ejecuta_qss= mysqli_query($con,$qss) or die("error al actualizar datos");
+
     
 }
-
+$ejecuta_qss= mysqli_query($con,$qss) or die("error al actualizar datos");
 
 mysqli_close($con);
 header('Location: imagenes.php');
