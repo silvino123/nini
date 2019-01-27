@@ -19,7 +19,7 @@
 
     <!-- Title -->
     <title>Nini&Co - Repostería Creativa</title>
-
+    <link rel="icon" href="img/core-img/icono.ico">
     <!-- Favicon -->
     <!--<link rel="icon" href="img/core-img/favicon.ico">-->
     <link rel="icon" src="caviar-master/img/core-img/icono.ico">

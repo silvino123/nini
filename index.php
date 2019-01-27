@@ -14,7 +14,7 @@
     <!-- Favicon -->
     <!--<link rel="icon" href="img/core-img/favicon.ico">-->
     <link rel="icon" src="caviar-master/img/core-img/icono.ico">
-
+    <link rel="icon" href="img/core-img/icono.ico">
     <!-- Core Stylesheet -->
     <link href="style.css" rel="stylesheet">
 

@@ -10,7 +10,7 @@
 
     <!-- Title -->
     <title>Nini&Co - Repostería Creativa</title>
-
+    <link rel="icon" href="img/core-img/icono.ico">
     <!-- Favicon -->
     <!--<link rel="icon" href="img/core-img/favicon.ico">-->
     <link rel="icon" src="caviar-master/img/core-img/icono.ico">
@@ -94,14 +94,14 @@
             <div class="row h-100">
                 <div class="col-12 h-100">
                     <nav class="h-100 navbar navbar-expand-lg align-items-center">
-                        <a class="navbar-brand" href="admin.html">
+                        <a class="navbar-brand" href="admin.php">
                             <img src="img/core-img/Logo.png"  width="50%" height="80%" alt="">
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#caviarNav" aria-controls="caviarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
                         <div class="collapse navbar-collapse" id="caviarNav">
                             <ul class="navbar-nav ml-auto" id="caviarMenu">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="admin.html">Inicio</a>
+                                    <a class="nav-link" href="admin.php">Inicio</a>
                                 </li>
                                
                                 <li class="nav-item">
