@@ -8,13 +8,19 @@ if($_POST['rowid']) {
 
 $rs = mysqli_query($con, "SELECT * FROM imagenes where id =$id");
     $row = mysqli_fetch_array($rs);
-    $codigoPro =$row['id'];
+    $idm =$row['id'];
     $nombre=$row['nombre'];
     $des=$row['descripcion'];
+    $cat=$row['categoria'];
+    $ima=$row['imagen'];
     // Fetch Records
     // Echo the data you want to show in modal
 
     echo "<div class='row'>
+    <div class='col-12 col-lg-6' style='display: none'>
+    <label for='sel1'>Id</label>
+        <input type='text' class='form-control' id='Cod' name='Cod' required=''   value='".$idm."'>
+    </div>
     <div class='col-12 col-lg-6'>
     <label for='sel1'>Nombre</label>
         <input type='text' class='form-control' placeholder='Nombre Pastel' id='Nombre' name='Nombre' value='".$nombre."'>
@@ -29,7 +35,8 @@ $rs = mysqli_query($con, "SELECT * FROM imagenes where id =$id");
         <label for='sel1'>Selecciona el tipo de Pastel</label>
         <br>
         <select class='form-control' id='sel1' id='Cat' name='Cat'>
-            <option value='Personajes'>Personajes</option>
+        <option value='".$cat."' selected=''>".$cat."</option>
+           <option value='Personajes'>Personajes</option>
             <option value='CupCakes'>CupCakes</option>
             <option value='Panque'>Panque</option>
             <option value='inicio'>inicio</option>

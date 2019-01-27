@@ -271,14 +271,15 @@
         </button>
       </div>
       <div class="modal-body">
-      <form class="form-horizontal" method="post" action="../Controlador/regProducto2.php">
+      <form class="form-horizontal" method="post" action="editImagen.php">
                 <div class="fetched-data"></div> 
        
       </div>
       <div class="modal-footer">
-      </form>
+     
         <button type="submit" class="btn btn-secondary">Editar</button>
       </div>
+       </form>
     </div>
   </div>
 </div>

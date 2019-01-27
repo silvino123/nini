@@ -198,6 +198,7 @@
                             <button class="active" data-filter="*">Todos</button>
                             <button data-filter=".breakfast">Pasteles de Personajes</button>
                             <button data-filter=".lunch">Cup Cakes</button>
+                            <button data-filter=".panque">Panques</button>
                             <!-- <button data-filter=".dinner">dinner</button> -->
                         </div>
                     </div>
@@ -213,22 +214,7 @@
                               ?>
                                
                             </div>
-                            <!-- Single Gallery Item -->
-                            <!-- <div class="single_menu_item breakfast dinner wow fadeInUp">
-                                <div class="d-sm-flex align-items-center">
-                                    <div class="dish-thumb">
-                                        <img src="img/menu-img/Personajes/p2.jpg" alt="" style="width:300px;height:300px;border-radius:150px">
-                                    </div>
-                                    <div class="dish-description">
-                                        <h3>Lorem Ipsum Dolor Sit Amet</h3>
-                                        <p>Sed commodo augue eu diam tincidunt, sit amet auctor lectus semper. Mauris porttitor diam at fringilla tempor.</p>
-                                    </div>
-                                    <div class="dish-value">
-                                        <h3>$45</h3>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <!-- Single Gallery Item -->
+                           
                             <div class="single_menu_item lunch wow fadeInUp">
                               <?php 
 
@@ -236,20 +222,13 @@
                                 ?>
                                 
                             </div>
-                            <!-- Single Gallery Item -->
-                            <!-- <div class="single_menu_item lunch wow fadeInUp">
-                                <div class="d-sm-flex align-items-center">
-                                    
-                                        <img src="img/menu-img/Personajes/p4.jpg" alt="" style="width:300px;height:300px;border-radius:150px">
-                                   
-                                    <div class="dish-description">
-                                        <h3>Lorem Ipsum Dolor Sit Amet</h3>
-                                        <p>Sed commodo augue eu diam tincidunt, sit amet auctor lectus semper. Mauris porttitor diam at fringilla tempor.</p>
-                                    </div>
-                                    
-                                </div>
-                            </div> -->
-                           
+                            <div class="single_menu_item panque wow fadeInUp">
+                              <?php 
+
+                              require('conPanque.php');
+                                ?>
+                                
+                            </div>
                            
                         </div>
 
