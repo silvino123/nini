@@ -1,3 +1,17 @@
+<?php 
+
+    //echo $_SESSION["nombre"];
+    session_start();
+ if (!isset( $_SESSION["nombre"])){
+    
+    header("location:login.html");
+  
+  }
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 

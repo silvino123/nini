@@ -7,19 +7,21 @@ $password = trim($_POST['Password']);
 $rs  = "SELECT * FROM usuarios WHERE correo = '$correo' AND contrasena = '$password'";
 $qs = mysqli_query($con, $rs);
 $row    = mysqli_fetch_assoc($qs);
-if (!isset($row)) {
-    header("location: login.html");
-}
+// if (!isset($row)) {
+//     header("location: login.html");
+// }
          $id  = $row['id'];
-         $nombre= $row["correo"];
-         $password = $row['contrasena'];
+         $nombre= $row['correo'];
+         $contraseña = $row['contrasena'];
 
-
-if ($row["correo"] === $correo && $row["contrasena"] === $password) {
         session_start();
-        $_SESSION["nombre"] = $nombre;
-        $_SESSION["id"] = $id;
+if ($row["correo"] == $correo && $row["contrasena"] == $password) {
+       
         
+        $_SESSION['nombre'] = $nombre;
+        $_SESSION['id'] = $id;
+
+         
 
         echo "
                 <script language='JavaScript'>
@@ -36,7 +38,7 @@ if ($row["correo"] === $correo && $row["contrasena"] === $password) {
     } 
     else {
         echo "
-                <script type='text/javascript'>
+                <script language='JavaScript'>
                 var mensaje='Usuario o contraseña incorrecto';
                 alert(mensaje);
 

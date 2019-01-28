@@ -1,9 +1,12 @@
 <?php 
-//  if (!isset($_SESSION['id'])){
-//     header("location:login.html");
+
+    //echo $_SESSION["nombre"];
+    session_start();
+ if (!isset( $_SESSION["nombre"])){
+    
+    header("location:login.html");
   
-//   }
-  
+  }
 
 
 ?>
