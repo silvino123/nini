@@ -1,10 +1,9 @@
 <?php
 
-if (!isset($_SESSION)) {
-    header("location:login.html");
-} else {
-    session_unset();
+    session_start();
+    unset($_Session['nombre']);
+    //$_Session['Nombre'] = '';
     session_destroy();
     header("location:login.html");
-}
+
 ?>

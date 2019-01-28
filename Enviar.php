@@ -29,7 +29,6 @@ $message .= "Tamaño: $Tamaño <br>";
 $message .= "Fecha de Entrega: $Fecha <br>";
 $message .= "Personaje: $Personaje <br>";
 $message .= "Mensaje: $M <br>";
-//$message .= "Imagen : $Img";
 
 
 
@@ -45,6 +44,7 @@ require 'PHPMailer/SMTP.php';
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 try {
+
     //Server settings
     $mail->SMTPDebug = 0;                                 // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
@@ -61,11 +61,7 @@ try {
         // Add a recipient
  
 
-    //Attachments
     
-    // $mail->addAttachment('/var/tmp/file.tar.gz');          Add attachments
-    // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');     Optional name
-
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = $subject;
