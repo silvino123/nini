@@ -271,7 +271,7 @@
         </button>
       </div>
       <div class="modal-body">
-      <form class="form-horizontal" method="post" action="editImagen.php">
+      <form class="form-horizontal" method="post" action="editImagen.php" enctype="multipart/form-data">
                 <div class="fetched-data"></div> 
        
       </div>
