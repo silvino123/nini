@@ -33,30 +33,16 @@
         </div>
     </div>
 
-    <!-- ***** Search Form Area ***** -->
-    <div class="caviar-search-form d-flex align-items-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="search-close-btn" id="closeBtn">
-                        <i class="pe-7s-close-circle" aria-hidden="true"></i>
-                    </div>
-                    <form action="#" method="get">
-                        <input type="search" name="caviarSearch" id="search" placeholder="Search Your Favourite Dish ...">
-                        <input type="submit" class="d-none" value="submit">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- ***** Header Area Start ***** -->
     <header class="header_area" id="header">
         <div class="container h-100">
             <div class="row h-100">
                 <div class="col-12 h-100">
                     <nav class="h-100 navbar navbar-expand-lg align-items-center">
-                        <a class="navbar-brand" href="index.php">Nini&Co.</a>
+                        <a class="navbar-brand" href="index.php">
+                            <img src="img/core-img/Logo.png"  width="50%" height="80%" alt="">
+                        </a>
+                        <!--<a class="navbar-brand" href="index.php">Nini&Co.</a>-->
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#caviarNav" aria-controls="caviarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
                         <div class="collapse navbar-collapse" id="caviarNav">
                             <ul class="navbar-nav ml-auto" id="caviarMenu">
@@ -71,10 +57,6 @@
                                 </li>
                                
                             </ul>
-                            <!-- Search Btn -->
-                            <!--<div class="caviar-search-btn">
-                                <a id="search-btn" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-                            </div>-->
                         </div>
                     </nav>
                 </div>
@@ -90,7 +72,7 @@
                 <div class="col-12">
                     <div class="breadcumb-content">
                         <h2>Haz tu pedido aquí</h2>
-                        <p><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:+1234567890">6629485120</a> <a href="tel:+1234567890">6622151829</a></p>
+                        <p><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:6629485120">6629485120</a> <a> WhatsApp</a>
                         <p><i class="fa fa-map-marker" aria-hidden="true"></i>Hermosillo, Sonora</p>
                         <p><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="">info@niniandco.com</a></p>
                     </div>
@@ -112,18 +94,32 @@
                      <form action="Enviar.php" method="POST" class="caviar-testimonials-area" enctype="multipart/form-data">
                          <div class="row">
                              <div class="col-12 col-lg-6">
-                                 <input type="text" class="form-control" placeholder="Nombre Completo" name="Nombre" >
+                                 <input type="text" class="form-control" placeholder="Nombre Completo" name="Nombre" required>
                              </div>
                              <div class="col-12 col-lg-6">
-                                 <input type="email" class="form-control" placeholder="Correo" name="Email">
+                                 <input type="email" class="form-control" placeholder="Correo" name="Email" required>
                              </div>
+                             <div class="col-lg-6">
+                                <label for="sel1">Selecciona el Producto:</label>
+                                <br>
+                                <select class="form-control" id="Producto" name="Producto" required>
+                                    <option value="0">Seleccionar--</option>
+                                    <option value="Pastel">Pastel</option>
+                                   <option value="Panque">Panque</option>
+                                    <option value="Cupcakes">Cupcakes</option>
+                                    <option value="Pay">Pay</option>
+                                    <option value="Galletas">Galletas</option>
+                                    <option value="Bollos Chinos">Bollos Chinos</option>
+                                    
+                                </select>
+                            </div>
                              <br>
                              <br>
                              <div class="col-lg-6">
                                  <label for="sel1">Selecciona el sabor de tu Pedido:</label>
                                  <br>
-                                 <select class="form-control" id="sel1" name="Sabor">
-                                    <option value="Arandano">Arandano</option>
+                                 <select class="form-control" id="Sabor" name="Sabor" required>
+                                    <!-- <option value="Arandano">Arandano</option>
                                     <option value="Cafe">Cafe</option>
                                      <option value="Capuccino">Capuccino</option>
                                      <option value="Caramelo">Caramelo</option>
@@ -147,42 +143,45 @@
                                      <option value="Red-Velvet">Red Velvet</option>
                                      <option value="Tres-Leches">Tres Leches</option>
                                      <option value="Vainilla">Vainilla</option>
-                                     
+                                      -->
                                      
                                     
                                  </select>
                              </div>
                              <div class="col-lg-6">
                                  <label for="sel1">Selecciona el tamaño de tu Pedido:</label>
-                                 <select class="form-control" id="sel1" name="Tamaño">
-                                     <option value="Mini">Mini</option>
+                                 <select class="form-control" id="sel1" name="Tamaño" required>
+                                     <option value="Especial">Especial</option>
                                      <option value="10 Porciones">10 Porciones</option>
                                      <option value="20 Porciones">20 Porciones</option>
                                      <option value="30 Porciones">30 Porciones</option>
                                      <option value="50 Porciones">50 Porciones</option>
+                                     <option value="1/4 Plancha">1/4 Plancha</option>
+                                     <option value="1/2 Plancha">1/2 Plancha</option>
+                                     <option value="1 Plancha">1 Plancha</option>
                                  </select>
                              </div>
                              
                              <div class="col-12 col-lg-6">
                                      <label for="sel1">Fecha de entegra:</label>
-                                 <input type="date" class="form-control" name="Fecha_Entrega">
+                                 <input type="date" class="form-control" name="Fecha_Entrega" required>
                                 
                              </div>
                              <div class="col-12 col-lg-6">
                                      <label for="sel1">Telefono:</label>
-                                 <input type="number" class="form-control" name="Telefono">
+                                 <input type="number" class="form-control" name="Telefono" required>
                              </div>
-                             <div class="col-12 col-lg-6">
-                                     <label for="sel1">Persnaje:</label>
+                             <!-- <div class="col-12 col-lg-6">
+                                     <label for="sel1">Personaje:</label>
                                  <input type="text" class="form-control" placeholder="Personaje" name="Personaje">
-                             </div>
+                             </div> -->
                              <div class="col-12 col-lg-6">
                                      <label for="sel1">Imagen:</label>
                                  <input type="file" class="form-control" placeholder="Last name" name="Imagen">
                              </div>
                              <div class="col-12 col-lg-6">
                                      <label for="sel1">Dieccion:</label>
-                                 <input type="text" class="form-control" placeholder="Direccion" name="Direccion">
+                                 <input type="text" class="form-control" placeholder="Direccion" name="Direccion" required>
                              </div>
                              <div class="col-12 col-lg-6">
                                      
@@ -219,9 +218,9 @@
             <div class="row">
                 <div class="col-12">
                     <div class="footer-text">
-                        <a href="#" class="navbar-brand">NINI&CO</a>
+                        <a href="#" class="navbar-brand">Nini&Co.</a>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  | Powered by <a href="https://colorlib.com" target="_blank">Colorlib</a> </p><!--| This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>-->
+                        <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  | Powered by <a href="" target="_blank">Sycsoft</a> </p><!--| This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>-->
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </div>
                 </div>
@@ -283,3 +282,38 @@
             
            </script> -->
 </body>
+<script>
+   
+ $(document).on("change","#Producto",function(){
+
+var pasteles = "<option value='Aleman'>Aleman</option><option value='Cafe y Nuez'>Cafe y Nuez</option><option value='Capuccino'>Capuccino</option><option value='Caramelo'>Caramelo</option><option value='Cereza'>Cereza</option><option value='Choco-banana'>Choco-banana</option>"+
+"<option value='Choco-cereza'>Choco-cereza</option><option value='Choco-chip'>Choco-chip</option><option value='Chocolate'>Chocolate</option><option value='Coco'>Coco</option><option value='Colibri'>Colibri</option><option value='Confetti'>Confetti</option><option value='Dulce de leche'>Dulce de leche</option>"+
+"<option value='Fresa'>Fresa</option><option value='Mango'>Mango</option><option value='Manzana-canela'>Manzana-canela</option><option value='Mazapan'>Mazapan</option><option value='Mazapan'>Mazapan</option><option value='Moka'>Moka</option><option value='Napolitano'>Napolitano</option>"+
+"<option value='Naranja'>Naranja</option><option value='Nuez'>Nuez</option><option value='Oreo'>Oreo</option><option value='Peanut butter'>Peanut butter</option><option value='Red velvet'>Red velvet</option><option value='Tres leches'>Tres leches</option><option value='Vainilla'>Vainilla</option>"+
+"<option value='Zanahoria'>Zanahoria</option>"
+var panque = "<option value='Almendras'>Almendras</option><option value='Arandanos'>Arandanos</option><option value='Chocolate'>Chocolate</option><option value='Coco'>Coco</option><option value='Nuez'>Nuez</option><option value='Pasas'>Pasas</option>"
+var cupcakes="<option value='Aleman'>Aleman</option><option value='Chocolate'>Chocolate</option><option value='Coco'>Coco</option><option value='Colibri'>Colibri</option><option value='Confetti'>Confetti</option><option value='Fresa'>Fresa</option><option value='Moka'>Moka</option>"+
+"<option value='Napolitano'>Napolitano</option><option value='Oreo'>Oreo</option><option value='Peanut butter'>Peanut butter</option><option value='Red velvet'>Red velvet</option><option value='Vainilla'>Vainilla</option><option value='Zanahoria'>Zanahoria</option>"
+var pay="<option value='Blueberry'>Blueberry</option><option value='Fresas'>Fresas</option><option value='Limon'>Limon</option><option value='Manzana'>Manzana</option><option value='Piña'>Piña</option><option value='Platano'>Platano</option><option value='Queso'>Queso</option>"
+var galletas="<option value='Arandanos'>Arandanos</option><option value='Cereza-chocochip'>Cereza-chocochip</option><option value='Choco-chip'>Choco-chip</option><option value='Chocolate'>Chocolate</option><option value='Coco'>Coco</option><option value='Confetti'>Confetti</option>"+
+"<option value='Dulce de leche'>Dulce de leche</option><option value='Naranja'>Naranja</option><option value='Nuez'>Nuez</option><option value='Peanut butter'>Peanut butter</option><option value='Vainilla'>Vainilla</option>"
+var bollos="<option value='Almendras'>Almendras</option><option value='Arandanos'>Arandanos</option><option value='Chispas chocolate'>Chispas chocolate</option><option value='Coco'>Coco</option><option value='Confetti'>Confetti</option><option value='Nuez'>Nuez</option><option value='Pasas'>Pasas</option>"
+var idPrducto = $("#Producto option:selected").val();
+
+if(idPrducto == "Pastel")
+    $("#Sabor").html(pasteles);
+else if(idPrducto =="Panque")
+    $("#Sabor").html(panque);
+     else if(idPrducto =="Cupcakes")
+    $("#Sabor").html(cupcakes);
+    else if(idPrducto =="Pay")
+    $("#Sabor").html(pay);
+    else if(idPrducto =="Galletas")
+    $("#Sabor").html(galletas);
+    else if(idPrducto =="Bollos Chinos")
+    $("#Sabor").html(bollos);
+    else if(idPrducto =="0")
+    $("#Sabor").empty();
+});
+</script>
+   
